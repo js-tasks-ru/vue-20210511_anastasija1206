@@ -1,8 +1,7 @@
 import Vue from './vendor/vue.esm.browser.js';
 
-// Требуется создать Vue приложение
-new Vue({
-  el: '#app',
+const app = new Vue({
+  template: `#app`,
   data() {
     return {
       count: 0,
@@ -14,3 +13,5 @@ new Vue({
     },
   },
 });
+
+app.$mount('#app');
