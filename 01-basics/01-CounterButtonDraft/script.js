@@ -1,7 +1,7 @@
 import Vue from './vendor/vue.esm.browser.js';
 
 // Требуется создать Vue приложение
-const app = new Vue({
+new Vue({
   el: '#app',
   data() {
     return {
