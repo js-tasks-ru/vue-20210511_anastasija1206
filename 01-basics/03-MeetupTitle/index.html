@@ -7,6 +7,13 @@
 <body>
 
 <!-- Решение -->
+<div id="app">
+  <template v-for="item in countMeetups">
+  <input type="radio" :id="item" :value="item" v-model="pickedId">
+  <label :for="item">{{item}}</label>
+</template>
+<p>{{title}}</p>
+</div>
 
 <script type="module" src="script.js"></script>
 </body>
