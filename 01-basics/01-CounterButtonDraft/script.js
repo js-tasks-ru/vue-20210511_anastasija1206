@@ -1,7 +1,7 @@
 import Vue from './vendor/vue.esm.browser.js';
 
 const app = new Vue({
-  template: `#app`,
+  el: '#app',
   data() {
     return {
       count: 0,
@@ -13,5 +13,3 @@ const app = new Vue({
     },
   },
 });
-
-app.$mount('#app');
