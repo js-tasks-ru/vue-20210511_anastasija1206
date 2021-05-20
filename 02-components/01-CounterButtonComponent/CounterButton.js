@@ -15,7 +15,7 @@ const CounterButton = {
   // Шаблон лучше держать максимально простым, а логику выносить в методы
   methods: {
     btnClick(){
-      this.$emit('increment', parseInt(this.count + 1))
+      this.$emit('increment', this.count + 1)
     }
 
   },
