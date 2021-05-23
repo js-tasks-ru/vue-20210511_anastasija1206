@@ -1,17 +1,29 @@
 export default {
   name: 'MeetupInfo',
   props: {
-    organizer: String,
-    place: String,
-    date: Date
+    organizer: {
+      type: String,
+      required: true,
+    },
+    place: {
+      type: String,
+      required: true,
+    },
+    date: {
+      type: Date,
+      required: true,
+    },
   },
   computed:{
-    data(){
-      return new Date(this.date).toLocaleString('ru-Ru', {
+    localeDate(){
+      return new Date(this.date).toLocaleString(navigator.language, {
         year: 'numeric',
         month: 'long',
         day: 'numeric',
       });
+    },
+    dateTime(){
+      return this.date.toISOString().substr(0, 10)
     }
   },
 
@@ -27,7 +39,7 @@ export default {
       </li>
       <li>
         <img class="icon info-list__icon" alt="icon" src="/assets/icons/icon-cal-lg.svg" />
-        <time datetime="2020-01-01">{{data}}</time>
+        <time :datetime="dateTime">{{localeDate}}</time>
       </li>
     </ul>`,
 };

@@ -65,7 +65,7 @@ const app = new Vue({
     });
   }
  
-  meetup.date = new Date(meetup.date).toLocaleString('ru-Ru', {
+  meetup.date = new Date(meetup.date).toLocaleString(navigator.language, {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
