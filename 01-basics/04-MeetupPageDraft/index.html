@@ -11,7 +11,7 @@
 <body>
 <div v-if="meetup != null" id="app">
   <div>
-    <div class="meetup-cover" :style="`--bg-url: url(${meetup.imageUrl})`">
+    <div class="meetup-cover" :style="meetup.style">
       <h1 class="meetup-cover__title">{{meetup.title}}</h1>
     </div>
 
