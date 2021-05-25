@@ -56,7 +56,7 @@ const app = new Vue({
   const meetup = await fetch(`${API_URL}/meetups/${MEETUP_ID}`)
                   .then((response) => response.json());
   
-  meetup.imageUrl = getImageUrlByImageId(meetup.imageId);
+  meetup.style = meetup.imageId && `--bg-url: url(${getImageUrlByImageId(meetup.imageId)})`;
 
   if(meetup.agenda.length){
     meetup.agenda.forEach((agenda) =>{
