@@ -15,12 +15,12 @@ const MeetupView = {
   props: {
     meetup: {
      type: Object,
-     require: true
+     required: true
     }
   },
   computed: {
     link(){
-      return getImageUrlByImageId(this.meetup.imageId);
+      return this.meetup.imageId && getImageUrlByImageId(this.meetup.imageId);
     }
   },
   template: `
